@@ -1,0 +1,34 @@
+.itemCard 
+{
+    max-width: 400px;
+ }
+  .mainHead
+  {
+    background: #ffbf00;
+    color: #fff;
+    font-family:"Helvetica";
+ 
+
+  }
+  .headerImg {
+    background-image: url('C:\Users\CodeTribe\eshop\src\img\customer-service.png');
+    background-size: cover;
+    background-color: #ffbf00;
+    width: 35px;
+    height: 35px;
+  }
+.checkoutWall
+{
+    background: #ffbf00;
+    color: #fff;
+    font-family:"Helvetica";
+
+}
+.checkHead
+{
+    background: #fff;
+    color: #ffbf00;
+    font-family:"Helvetica";
+
+}
+  

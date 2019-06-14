@@ -1,0 +1,78 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-card class="mainHead">
+  <mat-card-header>
+    <div mat-card-avatar class="headerImg"></div>
+    <mat-card-title>{{title}}</mat-card-title>
+  
+  </mat-card-header>
+ 
+  <mat-card-content>
+      <p>
+       
+       
+
+      </p>
+    </mat-card-content>
+
+
+
+  </mat-card>
+  
+<!---  Item list-->
+  <mat-grid-list  cols="3" rowHeight="1:1">
+      <mat-grid-tile  *ngFor="let item of items"> 
+  <mat-card class="itemCard" >
+
+  <mat-card-header>
+   
+      <mat-card-title>{{item.itemName}} </mat-card-title>
+  
+  </mat-card-header>
+  
+  <img mat-card-image src="{{item.picUrl}}" alt="Photo of item" class="itemCard">
+
+  <mat-card-content>
+    <p>
+        {{item.desc}}
+    </p>
+    <p>
+        R{{item.price}}
+    </p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button (click)="addToCart(item)" class="mainHead">Add To Cart</button>
+  
+  </mat-card-actions>
+</mat-card>
+</mat-grid-tile> 
+
+</mat-grid-list>
+
+<!---  checkout list frame-->
+<mat-grid-list  cols="3" rowHeight="1:1">
+
+  <!---  checkout wall-->
+  <mat-card class="checkoutWall">
+      <mat-card-title >Checkout</mat-card-title>
+  </mat-card>
+
+<!---  checkout list-->
+<mat-card>
+<mat-toolbar  class="checkHead">
+
+    
+        <mat-toolbar-row *ngFor="let cartI of cartItems" class="itemCard">
+          <span >{{cartI.desc}}- Price:R{{cartI.price}}   <!--{{cartI.qty}}--><button mat-button (click)="delete(cartI)" class="mainHead">delete</button></span>
+           
+        </mat-toolbar-row>
+        <mat-toolbar-row> <span> </span> </mat-toolbar-row>
+      <mat-toolbar-row> <span>Total Price:R{{totalPrice}}<button mat-button (click)="checkout(cartI)" class="mainHead">checkout</button> </span> </mat-toolbar-row>  
+  
+
+              
+            
+  
+</mat-toolbar>
+</mat-card>
+<!---  checkout list-->
