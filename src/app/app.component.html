@@ -62,8 +62,8 @@
 <mat-toolbar  class="checkHead">
 
     
-        <mat-toolbar-row *ngFor="let cartI of cartItems" class="itemCard">
-          <span >{{cartI.desc}}- Price:R{{cartI.price}}   <!--{{cartI.qty}}--><button mat-button (click)="delete(cartI)" class="mainHead">delete</button></span>
+        <mat-toolbar-row  *ngFor="let cartI of cartItems" class="itemCard">
+ <span > {{cartI.desc}}- Price:R{{cartI.price}}  {{cartI.qty}} <button mat-button (click)="delete(cartI)" class="mainHead">delete</button></span>
            
         </mat-toolbar-row>
         <mat-toolbar-row> <span> </span> </mat-toolbar-row>
